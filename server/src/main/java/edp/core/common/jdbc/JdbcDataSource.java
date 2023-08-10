@@ -120,7 +120,7 @@ public class JdbcDataSource {
     @Getter
     protected long maxEvictableIdleTimeMillis;
 
-    @Value("${source.time-between-connect-error-millis}")
+    @Value("${source.time-between-connect-error-millis:5000}")
     @Getter
     protected long timeBetweenConnectErrorMillis;
 

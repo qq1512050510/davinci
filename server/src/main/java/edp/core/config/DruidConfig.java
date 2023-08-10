@@ -29,6 +29,7 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.PropertySource;
 
 import java.sql.SQLException;
 import java.util.Properties;
@@ -38,6 +39,7 @@ import java.util.Properties;
  */
 @Slf4j
 @Configuration
+@PropertySource(value = {"classpath:application-${spring.profiles.active}.yml"})
 public class DruidConfig {
 
     @Value("${spring.datasource.url}")
